@@ -5,3 +5,14 @@ contraseña admin. Indicar como "tablespace" por defecto USERS y como
 USERS.
 */
 
+--EN CONEXIONSYSTEM
+CREATE USER administrador IDENTIFIED BY admin
+DEFAULT TABLESPACE USERS
+TEMPORARY TABLESPACE TEMP
+QUOTA 500K ON USERS;
+
+
+SELECT * 
+FROM ALL_USERS
+ORDER BY USERNAME;
+
